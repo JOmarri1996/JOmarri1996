@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Samples — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ── CSS Variables (Light / Dark) ── */
+        :root {
+            --bg-gradient-top: #f5fcfc;
+            --bg-gradient-bottom: #e6f5f3;
+            --text: #1a1a1a;
+            --text-secondary: #555555;
+            --headline: #065a52;
+            --accent: #2e35b7;
+            --primary: #0a736a;
+            --primary-light: #0c8c82;
+            --primary-dark: #065a52;
+            --glass-bg: rgba(255, 255, 255, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.7);
+            --card-shadow: rgba(10, 115, 106, 0.15);
+            --card-shadow-hover: rgba(10, 115, 106, 0.28);
+            --meta-bg: rgba(10, 115, 106, 0.04);
+            --meta-border: rgba(10, 115, 106, 0.08);
+            --meta-sender: #065a52;
+            --meta-subject: #555555;
+            --modal-bg: #ffffff;
+            --modal-header-bg: rgba(10, 115, 106, 0.04);
+            --modal-header-border: rgba(10, 115, 106, 0.08);
+            --modal-title: #065a52;
+            --modal-body-bg: #f0f9f8;
+            --btn-bg: rgba(10, 115, 106, 0.06);
+            --btn-border: rgba(10, 115, 106, 0.12);
+            --btn-text: #065a52;
+            --btn-hover-bg: rgba(10, 115, 106, 0.12);
+            --btn-hover-shadow: rgba(10, 115, 106, 0.08);
+            --scrollbar: rgba(10, 115, 106, 0.25);
+            --footer-bg: #0a736a;
+            --footer-text: rgba(255, 255, 255, 0.7);
+            --footer-text-dim: rgba(255, 255, 255, 0.5);
+            --overlay-bg: rgba(5, 18, 16, 0.85);
+            --widget-bg: rgba(255, 255, 255, 0.7);
+            --widget-border: rgba(10, 115, 106, 0.2);
+            --widget-text: #065a52;
+            --widget-hover-bg: #0a736a;
+            --widget-hover-text: #ffffff;
+            --widget-shadow: rgba(10, 115, 106, 0.15);
+            --badge-promo: #f59e0b;
+            --badge-booking: #2e35b7;
+            --badge-launch: #ec4899;
+            --badge-order: #e61e19;
+        }
+
+        [data-theme="dark"] {
+            --bg-gradient-top: #091a18;
+            --bg-gradient-bottom: #051210;
+            --text: #f5fcfc;
+            --text-secondary: #a8bfbc;
+            --headline: #f5fcfc;
+            --accent: #818cf8;
+            --primary: #0c8c82;
+            --primary-light: #0fa89a;
+            --primary-dark: #0a736a;
+            --glass-bg: rgba(10, 25, 23, 0.6);
+            --glass-border: rgba(10, 115, 106, 0.3);
+            --card-shadow: rgba(0, 0, 0, 0.4);
+            --card-shadow-hover: rgba(0, 0, 0, 0.6);
+            --meta-bg: rgba(0, 0, 0, 0.3);
+            --meta-border: rgba(10, 115, 106, 0.15);
+            --meta-sender: #f5fcfc;
+            --meta-subject: #a8bfbc;
+            --modal-bg: #0c2421;
+            --modal-header-bg: rgba(0, 0, 0, 0.3);
+            --modal-header-border: rgba(10, 115, 106, 0.15);
+            --modal-title: #f5fcfc;
+            --modal-body-bg: #051210;
+            --btn-bg: rgba(10, 115, 106, 0.15);
+            --btn-border: rgba(10, 115, 106, 0.3);
+            --btn-text: #f5fcfc;
+            --btn-hover-bg: rgba(10, 115, 106, 0.25);
+            --btn-hover-shadow: rgba(10, 115, 106, 0.15);
+            --scrollbar: rgba(255, 255, 255, 0.2);
+            --footer-bg: #051210;
+            --footer-text: rgba(245, 252, 252, 0.7);
+            --footer-text-dim: rgba(245, 252, 252, 0.5);
+            --overlay-bg: rgba(0, 0, 0, 0.9);
+            --widget-bg: rgba(12, 36, 33, 0.85);
+            --widget-border: rgba(10, 115, 106, 0.3);
+            --widget-text: #f5fcfc;
+            --widget-hover-bg: #0c8c82;
+            --widget-hover-text: #ffffff;
+            --widget-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        /* ── Reset & Base ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            transition: background 0.4s ease, color 0.4s ease;
+            padding-bottom: 100px;
+            overflow-x: hidden;
+        }
+
+        /* ── Theme Toggle (Top Right) ── */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--widget-bg);
+            border: 1px solid var(--widget-border);
+            color: var(--widget-text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px var(--widget-shadow);
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .theme-toggle:hover {
+            background: var(--widget-hover-bg);
+            color: var(--widget-hover-text);
+            transform: scale(1.08) rotate(15deg);
+            border-color: var(--widget-hover-bg);
+        }
+
+        .theme-toggle .icon-light,
+        .theme-toggle .icon-dark {
+            display: block;
+            line-height: 1;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .theme-toggle .icon-dark {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .icon-light {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .icon-dark {
+            display: block;
+        }
+
+        /* ── Floating Widgets (Bottom) ── */
+        .floating-widgets {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            pointer-events: none;
+        }
+
+        .floating-widget {
+            pointer-events: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            background: var(--widget-bg);
+            border: 1px solid var(--widget-border);
+            color: var(--widget-text);
+            text-decoration: none;
+            border-radius: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px var(--widget-shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .floating-widget:hover {
+            background: var(--widget-hover-bg);
+            color: var(--widget-hover-text);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px var(--widget-shadow);
+            border-color: var(--widget-hover-bg);
+        }
+
+        .floating-widget .widget-icon {
+            font-size: 16px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .floating-widget .widget-label {
+            line-height: 1;
+        }
+
+        /* ── Main Container ── */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 20px 48px;
+            position: relative;
+        }
+
+        /* ── Headline ── */
+        .page-headline {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-headline h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            color: var(--headline);
+            letter-spacing: -0.5px;
+            transition: color 0.4s ease;
+            line-height: 1.15;
+        }
+
+        .page-headline h1 span {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: color 0.4s ease;
+        }
+
+        .page-headline p {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+        /* ── Gallery Counter ── */
+        .gallery-counter {
+            text-align: center;
+            margin-bottom: 28px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .gallery-counter .current {
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .gallery-counter .divider {
+            width: 30px;
+            height: 1.5px;
+            background: var(--primary);
+            opacity: 0.4;
+        }
+
+        /* ── Card Stack ── */
+        .card-stack-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            height: 760px;
+            margin: 0 auto;
+            perspective: 1600px;
+            perspective-origin: center center;
+        }
+
+        .card-stack {
+            position: absolute;
+            inset: 0;
+            transform-style: preserve-3d;
+        }
+
+        /* ── Email Card ── */
+        .email-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 60px var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1),
+                        opacity 0.75s cubic-bezier(0.4, 0.0, 0.2, 1),
+                        box-shadow 0.5s ease;
+            will-change: transform, opacity;
+            cursor: pointer;
+            transform-origin: center center;
+        }
+
+        /* Active (front) card */
+        .email-card.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+            z-index: 30;
+            box-shadow: 0 32px 80px var(--card-shadow-hover);
+        }
+
+        .email-card.active:hover {
+            transform: translate3d(0, -6px, 0) rotateY(0deg) scale(1.005);
+            box-shadow: 0 40px 90px var(--card-shadow-hover);
+        }
+
+        /* Behind cards — peek effect */
+        .email-card.behind-1 {
+            opacity: 0.75;
+            transform: translate3d(0, 14px, -60px) rotateY(0deg) scale(0.955);
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        .email-card.behind-2 {
+            opacity: 0.45;
+            transform: translate3d(0, 26px, -120px) rotateY(0deg) scale(0.91);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .email-card.behind-3 {
+            opacity: 0.2;
+            transform: translate3d(0, 36px, -180px) rotateY(0deg) scale(0.865);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Card flying out (when navigating) */
+        .email-card.fly-left {
+            opacity: 0;
+            transform: translate3d(-120%, 0, 200px) rotateY(-35deg) scale(0.85);
+            z-index: 40;
+            pointer-events: none;
+            transition: transform 0.65s cubic-bezier(0.4, 0.0, 0.2, 1),
+                        opacity 0.65s ease;
+        }
+
+        .email-card.fly-right {
+            opacity: 0;
+            transform: translate3d(120%, 0, 200px) rotateY(35deg) scale(0.85);
+            z-index: 40;
+            pointer-events: none;
+            transition: transform 0.65s cubic-bezier(0.4, 0.0, 0.2, 1),
+                        opacity 0.65s ease;
+        }
+
+        /* Card entering from behind (prev navigation) */
+        .email-card.enter-behind {
+            opacity: 0;
+            transform: translate3d(0, 40px, -220px) scale(0.85);
+            transition: none;
+        }
+
+        /* ── Email Metadata (Card Header) ── */
+        .email-meta {
+            padding: 16px 22px 14px;
+            background: var(--meta-bg);
+            border-bottom: 1px solid var(--meta-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex-shrink: 0;
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        .email-meta .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            min-width: 0;
+        }
+
+        .email-meta .card-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--primary);
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            padding: 4px 10px;
+            border-radius: 20px;
+            line-height: 1;
+        }
+
+        .email-meta .sender {
+            color: var(--meta-sender);
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: color 0.4s ease;
+        }
+
+        .email-meta .sender .badge {
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .badge-promo { background: var(--badge-promo); }
+        .badge-booking { background: var(--badge-booking); }
+        .badge-launch { background: var(--badge-launch); }
+        .badge-order { background: var(--badge-order); }
+
+        .email-meta .subject {
+            color: var(--meta-subject);
+            font-size: 13px;
+            font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+            transition: color 0.4s ease;
+        }
+
+        .email-meta .right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .fullview-btn {
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--btn-text);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .fullview-btn:hover {
+            background: var(--btn-hover-bg);
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 0 0 4px var(--btn-hover-shadow);
+            transform: translateY(-1px);
+        }
+
+        /* ── Preview Frame (inner) ── */
+        .preview-frame {
+            flex: 1;
+            min-height: 0;
+            margin: 0;
+            background: #ffffff;
+            overflow-y: auto;
+            overflow-x: auto;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+        }
+
+        [data-theme="dark"] .preview-frame {
+            background: #f0f1f5;
+        }
+
+        .preview-frame::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .preview-frame::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .preview-frame::-webkit-scrollbar-thumb {
+            background: var(--scrollbar);
+            border-radius: 12px;
+        }
+
+        /* ── Email Wrapper ── */
+        .email-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            pointer-events: none;
+            cursor: default;
+            padding: 4px 0;
+            word-break: normal !important;
+            overflow-wrap: normal !important;
+        }
+
+        .email-wrapper * {
+            word-break: normal !important;
+            overflow-wrap: normal !important;
+        }
+
+        .email-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .email-wrapper table {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .email-wrapper .ecw {
+            min-width: 0 !important;
+            width: 100% !important;
+        }
+
+        .email-wrapper a,
+        .email-wrapper button,
+        .email-wrapper [role="button"] {
+            pointer-events: none !important;
+            cursor: default !important;
+        }
+
+        /* ── Progress Bar ── */
+        .card-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(10, 115, 106, 0.1);
+            z-index: 5;
+            overflow: hidden;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+
+        .card-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* ── Navigation Arrows ── */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--widget-bg);
+            border: 1px solid var(--widget-border);
+            color: var(--widget-text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px var(--widget-shadow);
+            transition: all 0.3s ease;
+            font-size: 22px;
+            z-index: 100;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-arrow:hover {
+            background: var(--widget-hover-bg);
+            color: var(--widget-hover-text);
+            transform: translateY(-50%) scale(1.1);
+            border-color: var(--widget-hover-bg);
+        }
+
+        .nav-arrow.prev {
+            left: -30px;
+        }
+
+        .nav-arrow.next {
+            right: -30px;
+        }
+
+        /* ── Dot Indicators ── */
+        .dot-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--btn-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .dot:hover {
+            background: var(--primary-light);
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            width: 32px;
+            border-radius: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        /* ── Swipe Hint ── */
+        .swipe-hint {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: swipeHintPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes swipeHintPulse {
+            0%, 100% { opacity: 0.4; transform: translateX(0); }
+            50% { opacity: 0.9; transform: translateX(4px); }
+        }
+
+        /* ── MODAL OVERLAY ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--modal-bg);
+            border-radius: 24px;
+            max-width: 820px;
+            width: 100%;
+            max-height: 94vh;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 40px 80px var(--widget-shadow);
+            overflow: hidden;
+            transition: background 0.4s ease;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: modalIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes modalIn {
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 16px 24px;
+            background: var(--modal-header-bg);
+            border-bottom: 1px solid var(--modal-header-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        .modal-header h2 {
+            color: var(--modal-title);
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: color 0.4s ease;
+        }
+
+        .modal-header .close-btn {
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--btn-text);
+            font-size: 22px;
+            cursor: pointer;
+            padding: 2px 16px;
+            border-radius: 40px;
+            transition: 0.2s;
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .modal-header .close-btn:hover {
+            background: var(--btn-hover-bg);
+            border-color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: auto;
+            padding: 0;
+            background: var(--modal-body-bg);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            transition: background 0.4s ease;
+        }
+
+        .modal-body .email-wrapper {
+            max-width: 600px !important;
+            width: auto !important;
+            margin: 0 auto !important;
+            padding: 12px 0;
+            pointer-events: none;
+            cursor: default;
+            background: transparent;
+        }
+
+        .modal-body .email-wrapper table,
+        .modal-body .email-wrapper .ecw {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .modal-body .email-wrapper a,
+        .modal-body .email-wrapper button,
+        .modal-body .email-wrapper [role="button"] {
+            pointer-events: none !important;
+            cursor: default !important;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .modal-body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--scrollbar);
+            border-radius: 12px;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--footer-bg);
+            padding: 32px 20px 28px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 1px solid var(--meta-border);
+            transition: background 0.4s ease;
+        }
+
+        .footer p {
+            color: var(--footer-text);
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        .footer p span {
+            color: var(--footer-text-dim);
+        }
+
+        .footer .footer-links {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer .footer-links a {
+            color: var(--footer-text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .footer .footer-links a:hover {
+            color: var(--footer-text);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .card-stack-wrapper {
+                max-width: 600px;
+                height: 720px;
+            }
+            .nav-arrow.prev { left: -10px; }
+            .nav-arrow.next { right: -10px; }
+        }
+
+        @media (max-width: 700px) {
+            .card-stack-wrapper {
+                max-width: 100%;
+                height: 680px;
+            }
+            .nav-arrow {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+            .nav-arrow.prev { left: 4px; }
+            .nav-arrow.next { right: 4px; }
+            .email-meta .subject { max-width: 110px; font-size: 12px; }
+            .email-meta .sender { font-size: 12px; }
+            .page-headline p { font-size: 13px; }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 24px 12px 32px;
+            }
+            .card-stack-wrapper {
+                height: 620px;
+            }
+            .email-card {
+                border-radius: 18px;
+            }
+            .email-meta {
+                padding: 12px 14px 10px;
+                flex-wrap: wrap;
+            }
+            .email-meta .left {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .email-meta .subject {
+                max-width: 90px;
+                font-size: 11px;
+            }
+            .email-meta .card-number {
+                font-size: 10px;
+                padding: 3px 8px;
+            }
+            .fullview-btn {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+            .modal-header h2 {
+                font-size: 15px;
+            }
+            .modal-header .close-btn {
+                font-size: 18px;
+                padding: 0 12px;
+            }
+            .page-headline h1 {
+                font-size: 24px;
+            }
+            .floating-widgets {
+                padding: 0 12px;
+                bottom: 16px;
+            }
+            .floating-widget {
+                padding: 10px 16px;
+                font-size: 12px;
+                gap: 6px;
+            }
+            .floating-widget .widget-label {
+                display: none;
+            }
+            .floating-widget .widget-icon {
+                font-size: 18px;
+            }
+            .theme-toggle {
+                top: 12px;
+                right: 12px;
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+            .nav-arrow {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+            .gallery-counter {
+                font-size: 12px;
+            }
+            .gallery-counter .current {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== THEME TOGGLE ====== -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-light">☀️</span>
+        <span class="icon-dark">🌙</span>
+    </button>
+
+    <!-- ====== FLOATING WIDGETS ====== -->
+    <div class="floating-widgets">
+        <a href="#" class="floating-widget" id="backHomeWidget" aria-label="Back to Homepage">
+            <span class="widget-icon">🏠</span>
+            <span class="widget-label">Back to Homepage</span>
+        </a>
+        <a href="#" class="floating-widget" id="contactWidget" aria-label="Contact Me">
+            <span class="widget-icon">✉️</span>
+            <span class="widget-label">Contact Me</span>
+        </a>
+    </div>
+
+    <!-- ====== MAIN CONTAINER ====== -->
+    <div class="main-container">
+
+        <!-- Headline -->
+        <div class="page-headline">
+            <h1>Email <span>Samples</span></h1>
+            <p>A curated collection of email designs — tap, swipe, or click to explore</p>
+        </div>
+
+        <!-- Gallery Counter -->
+        <div class="gallery-counter">
+            <span class="current" id="counterCurrent">01</span>
+            <span class="divider"></span>
+            <span>04</span>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- CARD STACK                                                    -->
+        <!-- ============================================================ -->
+        <div class="card-stack-wrapper" id="cardStackWrapper">
+            <div class="card-stack" id="cardStack">
+
+                <!-- ============================================================ -->
+                <!-- CARD 1: The Good Pets – Welcome                                -->
+                <!-- ============================================================ -->
+                <div class="email-card" data-email="welcome" data-index="0">
+                    <div class="email-meta">
+                        <div class="left">
+                            <span class="card-number">01</span>
+                            <span class="sender">🐾 The Good Pets <span class="badge badge-promo">promo</span></span>
+                            <span class="subject">Welcome Email</span>
+                        </div>
+                        <div class="right">
+                            <button class="fullview-btn" data-target="welcome">⤢ Full View</button>
+                        </div>
+                    </div>
+                    <div class="preview-frame">
+                        <div class="email-wrapper">
+                            <!-- ====== THE GOOD PETS – WELCOME ====== -->
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+                            <head>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+                                <meta name="x-apple-disable-message-reformatting">
+                                <style>
+                                    body { margin:0; padding:0 }
+                                    table { mso-table-lspace:0; mso-table-rspace:0 }
+                                    p,span,h1,h2,h3,h4,h5,h6 { margin:0; padding:0 }
+                                    p { line-height:inherit }
+                                    a[x-apple-data-detectors] { color:inherit!important; text-decoration:inherit!important }
+                                    #MessageViewBody a { color:inherit; text-decoration:none }
+                                    img+div { display:none }
+                                    @media (max-width:599px) { .ecw { width:100%!important; min-width:0!important } }
+                                </style>
+                                <!--[if mso]><div><noscript><xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript></div><![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:1px) { .l0-c0,.l0-c1,.l0-c2 { display:block!important; width:100%!important } .l0-s0,.l0-s1 { display:block!important; width:auto!important; height:16px; font-size:0 } }</style>
+                                <!--<![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:450px) { .l1-c0,.l1-c1 { display:block!important; width:100%!important } .l1-s0 { display:block!important; width:auto!important; height:16px; font-size:0 } .layout-1 .ebi-mw-450 { max-width:450px!important } .layout-1 .ebi-mw-450 img { width:100%!important } }</style>
+                                <!--<![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:450px) { .l2-c0,.l2-c1,.l2-c2 { display:block!important; width:100%!important } .l2-s0,.l2-s1 { display:block!important; width:auto!important; height:16px; font-size:0 } .layout-2 .ebi-mw-450 { max-width:450px!important } .layout-2 .ebi-mw-450 img { width:100%!important } }</style>
+                                <!--<![endif]-->
+                                <style>@media(max-width:550px) { .ers-fs-180 { font-size:17px!important } .ers-fs-187 { font-size:17.4px!important } .ers-fs-207 { font-size:18.4px!important } .ers-fs-240 { font-size:20px!important } .ers-fs-273 { font-size:21.7px!important } .ers-fs-280 { font-size:22px!important } .ers-fs-480 { font-size:32px!important } }</style>
+                            </head>
+                            <body style="width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;background-color:#f0f1f5;margin:0;padding:0">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0f1f5" style="background-color:#f0f1f5">
+                                    <tbody><tr><td style="background-color:#f0f1f5">
+                                        <table align="center" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" class="ecw" style="max-width:600px;min-height:600px;margin:0 auto;background-color:#1b3b36;width:600px;min-width:600px">
+                                            <tbody>
+                                                <tr><td style="vertical-align:top"></td></tr>
+                                                <tr><td style="vertical-align:top;padding:0px 0px 0px 0px">
+                                                    <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                        <tbody><tr><td style="vertical-align:top">
+                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                <tbody>
+                                                                    <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:24px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="background-color:#f7f6ef;white-space:pre-wrap">The Good Pets</span><span style="white-space:pre-wrap"> </span><br></td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-0" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto;background-color:#fbe766;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:600px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="26.32%" class="l0-c0" style="width:26.32%;box-sizing:border-box;vertical-align:bottom;background-color:#f7f6ef;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td>
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:79px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/b11abc3a15bb6b54f2d122c0cbac5d13.png" width="79" height="86" style="display:block;width:79px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr></tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="0" class="l0-s0" style="width:0;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="47.37%" class="l0-c1" style="width:47.37%;box-sizing:border-box;vertical-align:middle;background-color:#f7f6ef;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td style="padding:15px 5px">
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" class="ers-fs-480" style="color:#1b3b36;font-size:48px;font-family:&quot;Playwrite US Trad&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:1.15;mso-line-height-alt:55.2px">Welcome<br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="0" class="l0-s1" style="width:0;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="26.32%" class="l0-c2" style="width:26.32%;box-sizing:border-box;vertical-align:top;background-color:#f7f6ef;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td>
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:104px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/b21c8b4ff6febcc04ef7d510ffc45ed6.png" width="104" height="100" style="display:block;width:104px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr></tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-240" style="color:#f7f6ef;font-size:24px;font-weight:700;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:33.6px"><span style="white-space:pre-wrap">to </span><span style="font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap">The Good Pets</span><br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:228px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0ba84a" style="background-color:#0ba84a;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:9px;padding-bottom:9px;padding-left:8px;padding-right:8px;text-align:center;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;font-size:18.7px;letter-spacing:0em;line-height:26.2px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:26.2px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Book Now </span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-1" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="48.55%" class="l1-c0" style="width:48.55%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;text-align:left;padding:0px 0px 16px;line-height:1.15;mso-line-height-alt:18.4px"><span class="ers-fs-180" style="font-size:18px;white-space:pre-wrap">Give Your Best Friend the Best</span><br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:left;line-height:1.25;mso-line-height-alt:20px">Your furry companion deserves the very best. Treat them to a luxurious spa day and watch them strut out feeling like royalty.<br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l1-s0" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="48.55%" class="l1-c1" style="width:48.55%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td>
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" class="ebi ebi-mw-450" style="width:100%;max-width:268px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/0ae892dec9b68e1285639c94561b32dd.png" width="268" height="188" style="display:block;width:268px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:56px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/4de10f3a4e0abe02883dac7c3bc6d65a.png" width="56" height="52" style="display:block;width:56px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/92cc143622985820ff945c44b79ddc37.jpg" width="600" height="417" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-273" style="color:#f7f6ef;font-size:27.3px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:38.2px">What Makes The Good Pets Different?<br></td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;border-spacing:0px;table-layout:fixed;direction:ltr">
+                                                                            <tbody>
+                                                                                <tr><td width="62.115358197678404%" style="width:62.115358197678404%;box-sizing:border-box;font-size:0">&nbsp;</td><td width="37.52232296174188%" style="width:37.52232296174188%;box-sizing:border-box;font-size:0">&nbsp;</td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" class="ers-fs-207" style="color:#1b3b36;font-size:20.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:29px">The Good Pets <br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" class="ers-fs-180" style="color:#f7f6ef;font-size:18px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:25.2px">Them <br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">Personalized care for every pet<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">A routine grooming experience<br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">Quality, pet-friendly products<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">Standard products<br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">A calm and welcoming atmosphere<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">A busy or stressful environment<br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">Care tailored to your pet's needs<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">One-size-fits-all approach<br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">Professional, attentive groomers<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">Basic grooming experience<br></td></tr></tbody></table></td></tr>
+                                                                                <tr><td rowspan="1" colspan="1" width="62%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:62%;height:20px;background-color:#f7f6ef;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#1b3b36;font-size:14.7px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px">Premium care at an affordable price<br></td></tr></tbody></table></td>
+                                                                                <td rowspan="1" colspan="1" width="38%" height="20" style="padding:9px;vertical-align:top;box-sizing:border-box;width:38%;height:20px;border-top:2px solid #dbdbdb;border-bottom:2px solid #dbdbdb;border-left:2px solid #dbdbdb;border-right:2px solid #dbdbdb"><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word"><tbody><tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:22.4px">Luxury pricing<br></td></tr></tbody></table></td></tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:182px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0ba84a" style="background-color:#0ba84a;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:8px;padding-bottom:8px;padding-left:8px;padding-right:8px;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:20px;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Book Now</span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-187" style="color:#f7f6ef;font-size:18.7px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:26.2px"><span style="font-weight:700;white-space:pre-wrap">A Better Grooming Experience Starts Here.</span><br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="white-space:pre-wrap">Because your pet deserves more than just a grooming appointment — they deserve </span><span style="font-weight:700;white-space:pre-wrap">care, comfort, and attention from start to finish.</span><br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:56px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/7974f7e5c755ce19b9b10d69adbbb91a.png" width="56" height="52" style="display:block;width:56px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-280" style="color:#f7f6ef;font-size:28px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.15;mso-line-height-alt:32.2px">Our Exclusive Spa Packages<br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-2" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="31.40%" class="l2-c0" style="width:31.40%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td style="padding:0px 0px 16px">
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" class="ebi ebi-mw-450" style="width:100%;max-width:174px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/f3f30b7500b50350cc633469b3c982ee.png" width="174" height="116" style="display:block;width:174px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 0px 16px;line-height:1.15;mso-line-height-alt:18.4px"><span class="ers-fs-180" style="font-size:18px;font-weight:700;white-space:pre-wrap">The Royal Treatment</span><br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.25;mso-line-height-alt:20px">Includes a soothing facial, gentle pawdicure, and a luxurious fur conditioning treatment.<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l2-s0" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="31.40%" class="l2-c1" style="width:31.40%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td style="padding:0px 0px 16px">
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" class="ebi ebi-mw-450" style="width:100%;max-width:174px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/0c4d5cb93fa81930d07a6dee99a87e01.png" width="174" height="116" style="display:block;width:174px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-180" style="color:#f7f6ef;font-size:18px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.15;mso-line-height-alt:20.7px">Bubble Bliss Package<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.25;mso-line-height-alt:20px">A revitalizing bath with aromatherapy bubbles followed by a professional blow-dry and style.<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;font-weight:700;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l2-s1" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="31.40%" class="l2-c2" style="width:31.40%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td style="padding:0px 0px 16px">
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" class="ebi ebi-mw-450" style="width:100%;max-width:174px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/019d02eb36eb3d3996a44decff3ef10b.png" width="174" height="116" style="display:block;width:174px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 0px 16px;line-height:1.15;mso-line-height-alt:18.4px"><span class="ers-fs-180" style="font-size:18px;font-weight:700;white-space:pre-wrap">The Fresh Breath Makeover</span><br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.25;mso-line-height-alt:20px">Includes a soothing facial, gentle pawdicure, and a luxurious fur conditioning treatment.<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:246px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0ba84a" style="background-color:#0ba84a;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:8px;padding-bottom:8px;padding-left:8px;padding-right:8px;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:20px;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Book Now</span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" style="color:#ffffff;font-size:16px;text-align:left;padding:0px 24px 16px;line-height:1.5;mso-line-height-alt:24px">
+                                                                        <span style="font-size:14px;font-style:italic;white-space:pre-wrap">Copyright © {{right_now.year}} {{location.name}}, All rights reserved.</span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> </span>
+                                                                        <span style="white-space:pre-wrap"><br><br></span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> </span>
+                                                                        <span style="font-size:14px;font-weight:700;white-space:pre-wrap">Our e-mail address is:</span><br>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> {{location.email}}</span>
+                                                                        <span style="white-space:pre-wrap"><br><br></span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> Want to change how you receive these emails?</span><br>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> You can </span>
+                                                                        <span style="font-size:14px;text-decoration:underline;white-space:pre-wrap">unsubscribe from this list</span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap">.</span><br>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 24px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/ac051e47f86b534e31c04306bebc6878.png" width="600" height="138" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td></tr>
+                                                    </tbody></table>
+                                                </td></tr>
+                                                <tr><td height="100%" style="height:100%;font-size:0;line-height:0" aria-hidden="true">&nbsp;</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td></tr></tbody>
+                                </table>
+                            </body>
+                            </html>
+                            <!-- ====== END WELCOME ====== -->
+                        </div>
+                    </div>
+                    <div class="card-progress"><div class="card-progress-bar"></div></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- CARD 2: The Good Pets – Appointment Confirmed                -->
+                <!-- ============================================================ -->
+                <div class="email-card" data-email="appointment" data-index="1">
+                    <div class="email-meta">
+                        <div class="left">
+                            <span class="card-number">02</span>
+                            <span class="sender">🐾 The Good Pets <span class="badge badge-booking">booking</span></span>
+                            <span class="subject">Appointment Confirmed</span>
+                        </div>
+                        <div class="right">
+                            <button class="fullview-btn" data-target="appointment">⤢ Full View</button>
+                        </div>
+                    </div>
+                    <div class="preview-frame">
+                        <div class="email-wrapper">
+                            <!-- ====== APPOINTMENT CONFIRMED ====== -->
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+                            <head>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+                                <meta name="x-apple-disable-message-reformatting">
+                                <style>
+                                    body { margin:0; padding:0 }
+                                    table { mso-table-lspace:0; mso-table-rspace:0 }
+                                    p,span,h1,h2,h3,h4,h5,h6 { margin:0; padding:0 }
+                                    p { line-height:inherit }
+                                    a[x-apple-data-detectors] { color:inherit!important; text-decoration:inherit!important }
+                                    #MessageViewBody a { color:inherit; text-decoration:none }
+                                    img+div { display:none }
+                                    @media (max-width:599px) { .ecw { width:100%!important; min-width:0!important } }
+                                </style>
+                                <style>@media(max-width:550px) { .ers-fs-187 { font-size:17.4px!important } .ers-fs-240 { font-size:20px!important } .ers-fs-280 { font-size:22px!important } }</style>
+                            </head>
+                            <body style="width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;background-color:#f0f1f5;margin:0;padding:0">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0f1f5" style="background-color:#f0f1f5">
+                                    <tbody><tr><td style="background-color:#f0f1f5">
+                                        <table align="center" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" class="ecw" style="max-width:600px;min-height:600px;margin:0 auto;background-color:#1b3b36;width:600px;min-width:600px">
+                                            <tbody>
+                                                <tr><td style="vertical-align:top"></td></tr>
+                                                <tr><td style="vertical-align:top;padding:0px 0px 0px 0px">
+                                                    <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                        <tbody><tr><td style="vertical-align:top">
+                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                <tbody>
+                                                                    <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-weight:700;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:24px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="background-color:#f7f6ef;white-space:pre-wrap">The Good Pets</span><span style="white-space:pre-wrap"> </span><br></td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-280" style="color:#f7f6ef;font-size:28px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 24px 8px;line-height:1.15;mso-line-height-alt:32.2px">✓ Appointment Confirmed!<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">Your pet's spa day is officially booked!<br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:56px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/4de10f3a4e0abe02883dac7c3bc6d65a.png" width="56" height="52" style="display:block;width:56px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 8px">
+                                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#f7f6ef;border-radius:12px;padding:16px 12px">
+                                                                            <tbody>
+                                                                                <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;text-align:left;padding:4px 0"><span style="font-weight:700;">🐶 Pet Name:</span> Bruno</td></tr>
+                                                                                <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;text-align:left;padding:4px 0"><span style="font-weight:700;">✂️ Service:</span> The Royal Spa Package</td></tr>
+                                                                                <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;text-align:left;padding:4px 0"><span style="font-weight:700;">📅 Date:</span> Saturday, September 12, 2026</td></tr>
+                                                                                <tr><td dir="ltr" style="color:#1b3b36;font-size:16px;font-family:&quot;Playwrite US Modern&quot;, Arial, Helvetica, sans-serif;text-align:left;padding:4px 0"><span style="font-weight:700;">⏰ Time:</span> 10:00 AM</td></tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:16px 24px 8px;line-height:1.4;mso-line-height-alt:22.4px">We can't wait to pamper your furry friend!<br>Please arrive 10 minutes early so they can settle in comfortably.</td></tr>
+                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:15px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">Need to reschedule? Just reply to this email — we're happy to help!<br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:228px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0ba84a" style="background-color:#0ba84a;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:9px;padding-bottom:9px;padding-left:8px;padding-right:8px;text-align:center;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;font-size:18.7px;letter-spacing:0em;line-height:26.2px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:26.2px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Manage Booking</span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/92cc143622985820ff945c44b79ddc37.jpg" width="600" height="417" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-187" style="color:#f7f6ef;font-size:18.7px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:26.2px"><span style="font-weight:700;white-space:pre-wrap">See you soon,</span><br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#f7f6ef;font-size:16px;font-family:&quot;Carollo Playscript&quot;, Arial, Helvetica, sans-serif;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">— The Good Pets Team 🐾<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#ffffff;font-size:16px;text-align:left;padding:0px 24px 16px;line-height:1.5;mso-line-height-alt:24px">
+                                                                        <span style="font-size:14px;font-style:italic;white-space:pre-wrap">Copyright © {{right_now.year}} {{location.name}}, All rights reserved.</span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> </span>
+                                                                        <span style="white-space:pre-wrap"><br><br></span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> </span>
+                                                                        <span style="font-size:14px;font-weight:700;white-space:pre-wrap">Our e-mail address is:</span><br>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> {{location.email}}</span>
+                                                                        <span style="white-space:pre-wrap"><br><br></span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> Want to change how you receive these emails?</span><br>
+                                                                        <span style="font-size:14px;white-space:pre-wrap"> You can </span>
+                                                                        <span style="font-size:14px;text-decoration:underline;white-space:pre-wrap">unsubscribe from this list</span>
+                                                                        <span style="font-size:14px;white-space:pre-wrap">.</span><br>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 24px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/ac051e47f86b534e31c04306bebc6878.png" width="600" height="138" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td></tr>
+                                                    </tbody></table>
+                                                </td></tr>
+                                                <tr><td height="100%" style="height:100%;font-size:0;line-height:0" aria-hidden="true">&nbsp;</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td></tr></tbody>
+                                </table>
+                            </body>
+                            </html>
+                            <!-- ====== END APPOINTMENT ====== -->
+                        </div>
+                    </div>
+                    <div class="card-progress"><div class="card-progress-bar"></div></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- CARD 3: SARI Beauty – Promotional                            -->
+                <!-- ============================================================ -->
+                <div class="email-card" data-email="promotional" data-index="2">
+                    <div class="email-meta">
+                        <div class="left">
+                            <span class="card-number">03</span>
+                            <span class="sender">🌸 SARI Beauty <span class="badge badge-launch">launch</span></span>
+                            <span class="subject">Promotional Email</span>
+                        </div>
+                        <div class="right">
+                            <button class="fullview-btn" data-target="promotional">⤢ Full View</button>
+                        </div>
+                    </div>
+                    <div class="preview-frame">
+                        <div class="email-wrapper">
+                            <!-- ====== SARI BEAUTY – PROMOTIONAL ====== -->
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+                            <head>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+                                <meta name="x-apple-disable-message-reformatting">
+                                <style>
+                                    body { margin:0; padding:0 }
+                                    table { mso-table-lspace:0; mso-table-rspace:0 }
+                                    p,span,h1,h2,h3,h4,h5,h6 { margin:0; padding:0 }
+                                    p { line-height:inherit }
+                                    a[x-apple-data-detectors] { color:inherit!important; text-decoration:inherit!important }
+                                    #MessageViewBody a { color:inherit; text-decoration:none }
+                                    img+div { display:none }
+                                    @media (max-width:599px) { .ecw { width:100%!important; min-width:0!important } }
+                                </style>
+                                <!--[if mso]><div><noscript><xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript></div><![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:450px) { .l0-c0,.l0-c1 { display:block!important; width:100%!important } .l0-s0 { display:block!important; width:auto!important; height:16px; font-size:0 } }</style>
+                                <!--<![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:450px) { .l1-c0,.l1-c1 { display:block!important; width:100%!important } .l1-s0 { display:block!important; width:auto!important; height:16px; font-size:0 } .layout-1 .ebi-mw-450 { max-width:450px!important } .layout-1 .ebi-mw-450 img { width:100%!important } }</style>
+                                <!--<![endif]-->
+                                <!--[if !mso]><!-->
+                                <style>@media (max-width:450px) { .l2-c0,.l2-c1 { display:block!important; width:100%!important } .l2-s0 { display:block!important; width:auto!important; height:16px; font-size:0 } }</style>
+                                <!--<![endif]-->
+                                <style>@media(max-width:550px) { .ers-fs-173 { font-size:16.7px!important } .ers-fs-240 { font-size:20px!important } .ers-fs-293 { font-size:22.7px!important } }</style>
+                            </head>
+                            <body style="width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;background-color:#f0f1f5;margin:0;padding:0">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0f1f5" style="background-color:#f0f1f5">
+                                    <tbody><tr><td style="background-color:#f0f1f5">
+                                        <table align="center" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" class="ecw" style="max-width:600px;min-height:600px;margin:0 auto;background-color:#f3faf3;width:600px;min-width:600px">
+                                            <tbody>
+                                                <tr><td style="vertical-align:top"></td></tr>
+                                                <tr><td style="vertical-align:top;padding:0px 0px 0px 0px">
+                                                    <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                        <tbody><tr><td style="vertical-align:top">
+                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                <tbody>
+                                                                    <tr><td dir="ltr" class="ers-fs-293" style="color:#1c3a33;font-size:29.3px;font-family:&quot;TAN Summers&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:24px 24px 16px;line-height:1.4;mso-line-height-alt:41px">Your Exclusive SARI Offer !!!<br></td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-173" style="color:#1c3a33;font-size:17.3px;font-weight:700;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:24.2px">Feed Your Skin the Radiance<br></td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/3e52ba1bb6494cb04d5c538d791af9d7.jpg" width="600" height="501" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:300px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0a736a" style="background-color:#0a736a;border-bottom:1px solid #ffde59;border-left:1px solid #ffde59;border-radius:25px;border-right:1px solid #ffde59;border-top:1px solid #ffde59;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#f3faf3;text-decoration:none;display:block;padding-top:10px;padding-bottom:10px;padding-left:8px;padding-right:8px;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:20px;font-weight:700;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#f3faf3;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#f3faf3">SHOP THE LAUNCH BUNDLE</span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:552px"><tbody><tr><td height="1" style="height:1px;border-radius:999px;line-height:1px;mso-line-height-rule:exactly;font-size:0;background-color:#bfc3c8">&nbsp;</td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-0" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="40.58%" class="l0-c0" style="width:40.58%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" class="ers-fs-240" style="color:#47342b;font-size:24px;font-weight:700;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.26;mso-line-height-alt:30.2px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-240" style="color:#063831;font-size:24px;font-weight:700;text-align:center;line-height:1.26;mso-line-height-alt:30.2px"><span style="background-color:#8cb544;white-space:pre-wrap">Vitamin C &amp; Tropical Aloe Glow Serum</span><br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l0-s0" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="56.52%" class="l0-c1" style="width:56.52%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="color:#063831;font-size:14.7px;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:20.2px;mso-line-height-alt:20.2px">Designed to help:<br></td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-173" style="color:#063831;font-size:17.3px;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.26;mso-line-height-alt:21.8px">✔ Hydrate dry skin<br></td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-173" style="color:#063831;font-size:17.3px;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.26;mso-line-height-alt:21.8px">✔ Improve skin brightness<br></td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-173" style="color:#063831;font-size:17.3px;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.26;mso-line-height-alt:21.8px">✔ Support a smoother-looking complexion<br></td></tr>
+                                                                                                    <tr><td dir="ltr" class="ers-fs-173" style="color:#063831;font-size:17.3px;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;line-height:1.26;mso-line-height-alt:21.8px">✔ Create a healthy natural glow<br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td dir="ltr" class="ers-fs-240" style="color:#063831;font-size:24px;white-space:pre-wrap;text-align:left;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:33.6px">Hi Jane Doe,<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;text-align:left;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="white-space:pre-wrap">Thank you for visiting </span><span style="font-weight:700;white-space:pre-wrap">SARI Beauty</span><span style="white-space:pre-wrap">.</span><br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">We're excited to welcome you to a skincare routine inspired by nature and backed by thoughtful formulation.<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">Our mission is simple:<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;text-align:left;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="font-weight:700;white-space:pre-wrap">Help your skin feel healthier, brighter, and naturally radiant—every single day.</span><br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">As part of our community, you'll receive:<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">✨ Early access to new product launches<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">🌿 Exclusive subscriber-only offers<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">📖 Skincare tips and routines<br></td></tr>
+                                                                    <tr><td dir="ltr" style="color:#063831;font-size:16px;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:22.4px">🎁 Limited-time promotions before anyone else<br></td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-1" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="58.70%" class="l1-c0" style="width:58.70%;box-sizing:border-box;vertical-align:top">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td>
+                                                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                                                            <table cellpadding="0" cellspacing="0" border="0" class="ebi ebi-mw-450" style="width:100%;max-width:324px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/78a1d0e4d39e2a366be416dad9d73043.png" width="324" height="273" style="display:block;width:324px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                                                        </td></tr></tbody></table>
+                                                                                                    </td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l1-s0" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="38.41%" class="l1-c1" style="width:38.41%;box-sizing:border-box;vertical-align:top;background-color:#f3faf3">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;font-family:Poppins, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px">As a thank you for joining us, enjoy our current launch promotion.<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;font-family:Poppins, Arial, Helvetica, sans-serif;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px"><span style="font-weight:700;white-space:pre-wrap">Buy 1 Glow Serum and receive a complimentary Dewy Lip Treatment Oil.</span><br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="font-size:16px;font-family:Poppins, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:left;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:22.4px">Offer available for a limited time.<br></td></tr>
+                                                                                                    <tr><td dir="ltr" style="color:#1c3a33;font-size:16px;white-space:pre-wrap;text-align:left;line-height:1.4;mso-line-height-alt:22.4px;text-decoration:none">&nbsp;</td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%"><img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/7a4d264e03b97b8fb5b635dcb250a30f.gif" width="600" height="600" style="display:block;width:600px;height:auto;max-width:100%"></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                            <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:300px"><tbody><tr><td style="width:100%">
+                                                                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#0a736a" style="background-color:#0a736a;border-bottom:1px solid #ffde59;border-left:1px solid #ffde59;border-radius:25px;border-right:1px solid #ffde59;border-top:1px solid #ffde59;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#f3faf3;text-decoration:none;display:block;padding-top:13px;padding-bottom:13px;padding-left:8px;padding-right:8px;text-align:center;font-family:Poppins, Arial, Helvetica, sans-serif;font-size:20px;font-weight:700;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#f3faf3;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#f3faf3">SHOP THE LAUNCH BUNDLE</span></a></td></tr></tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 24px 16px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-2" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr>
+                                                                                        <td width="48.55%" class="l2-c0" style="width:48.55%;box-sizing:border-box;vertical-align:top;border-top:1px solid #ffde59;border-bottom:1px solid #ffde59;border-left:1px solid #ffde59;border-right:1px solid #ffde59;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="color:#1c3a33;font-size:16px;text-align:left;line-height:1.4;mso-line-height-alt:22.4px"><span style="font-weight:700;white-space:pre-wrap">WHY YOU'LL LOVE SARI </span><span style="white-space:pre-wrap"><br> ✔ Vitamin C + Tropical Aloe <br> ✔ Dermatologist-Tested<br> ✔ 94% Felt Instant Hydration <br> ✔ Free US Shipping</span><br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                        <td width="16" class="l2-s0" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                        <td width="48.55%" class="l2-c1" style="width:48.55%;box-sizing:border-box;vertical-align:top;border-top:1px solid #ffde59;border-bottom:1px solid #ffde59;border-left:1px solid #ffde59;border-right:1px solid #ffde59;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                    <tbody><tr><td dir="ltr" style="color:#1c3a33;font-size:16px;text-align:left;line-height:1.4;mso-line-height-alt:22.4px"><span style="font-weight:700;white-space:pre-wrap">⭐ Customer Review</span><span style="white-space:pre-wrap"><br>  "My skin feels brighter after two weeks..." <br><br> 👤 Taylor G.</span><br></td></tr>
+                                                                                                </tbody></table>
+                                                                                            </td></tr></tbody></table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                    <tr><td style="padding:0px 0px 24px">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" class="layout-3" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto;background-color:#5170ff">
+                                                                            <tbody><tr><td style="text-align:center">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:600px;table-layout:fixed;margin:0 auto">
+                                                                                    <tbody><tr><td width="100.00%" style="width:100.00%;box-sizing:border-box;vertical-align:middle;background-color:#0a736a">
+                                                                                        <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                <tbody><tr><td dir="ltr" style="color:#f3faf3;font-size:13.3px;letter-spacing:-0.025em;text-align:center;line-height:22.4px;mso-line-height-alt:22.4px"><a href="{{ view_in_browser }}" target="_blank" rel="noopener nofollow" style="color:#f3faf3;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">View email in browser</span></a><br><a href="{{ update_preferences }}" target="_blank" rel="noopener nofollow" style="color:#f3faf3;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">U</span><span style="text-decoration:underline;white-space:pre-wrap">pdate your preferences</span></a><span style="white-space:pre-wrap"> or </span><a href="{{ unsubscribe }}" target="_blank" rel="noopener nofollow" style="color:#f3faf3;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">unsubscribe</span></a><span style="white-space:pre-wrap">.</span><span style="text-decoration:underline;white-space:pre-wrap"><br><br></span><span style="white-space:pre-wrap">123 Anywhere St., Any City, ST 12345</span><span style="white-space:pre-wrap"><br>Company Number: <a href="tel:07094561" target="_blank" rel="noopener noreferrer" style="color:#f3faf3;text-decoration:none">07094561</a> <br>© Company Inc.</span><br></td></tr>
+                                                                                            </tbody></table>
+                                                                                        </td></tr></tbody></table>
+                                                                                    </td></tr>
+                                                                                </tbody></table>
+                                                                            </td></tr></tbody></table>
+                                                                    </td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td></tr>
+                                                    </tbody></table>
+                                                </td></tr>
+                                                <tr><td height="100%" style="height:100%;font-size:0;line-height:0" aria-hidden="true">&nbsp;</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td></tr></tbody>
+                                </table>
+                            </body>
+                            </html>
+                            <!-- ====== END PROMOTIONAL ====== -->
+                        </div>
+                    </div>
+                    <div class="card-progress"><div class="card-progress-bar"></div></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- CARD 4: Oelvé Jewelry – Thank You                            -->
+                <!-- ============================================================ -->
+                <div class="email-card" data-email="thankyou" data-index="3">
+                    <div class="email-meta">
+                        <div class="left">
+                            <span class="card-number">04</span>
+                            <span class="sender">💎 Oelvé <span class="badge badge-order">order</span></span>
+                            <span class="subject">Thank You Email</span>
+                        </div>
+                        <div class="right">
+                            <button class="fullview-btn" data-target="thankyou">⤢ Full View</button>
+                        </div>
+                    </div>
+                    <div class="preview-frame">
+                        <div class="email-wrapper">
+                            <!-- ====== OELVÉ JEWELRY – THANK YOU ====== -->
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+                            <head>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+                                <meta name="x-apple-disable-message-reformatting">
+                                <style>
+                                    body{margin:0;padding:0}
+                                    table{mso-table-lspace:0;mso-table-rspace:0}
+                                    p,span,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+                                    p{line-height:inherit}
+                                    a[x-apple-data-detectors]{color:inherit!important;text-decoration:inherit!important}
+                                    #MessageViewBody a{color:inherit;text-decoration:none}
+                                    img+div{display:none}
+                                    @media (max-width:599px){.ecw{width:100%!important;min-width:0!important}}
+                                </style>
+                                <!--[if mso]><div><noscript><xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript></div><![endif]-->
+                                <style>@media(max-width:550px){.ers-fs-173{font-size:16.7px!important}.ers-fs-250{font-size:20.5px!important}.ers-fs-267{font-size:21.4px!important}}</style>
+                            </head>
+                            <body style="width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;background-color:#f0f1f5;margin:0;padding:0">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0f1f5" style="background-color:#f0f1f5">
+                                    <tbody><tr><td style="background-color:#f0f1f5">
+                                        <table align="center" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" class="ecw" style="max-width:600px;min-height:600px;margin:0 auto;background-color:#ffffff;width:600px;min-width:600px">
+                                            <tbody><tr><td style="vertical-align:top"></td></tr>
+                                            <tr><td style="vertical-align:top;padding:0px 0px 0px 0px">
+                                                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                    <tbody><tr><td style="vertical-align:top">
+                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                            <tbody>
+                                                                <tr><td style="padding:24px 24px 16px">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" class="layout-0" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                        <tbody><tr><td style="text-align:center">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                <tbody><tr>
+                                                                                    <td width="49.64%" style="width:49.64%;box-sizing:border-box;vertical-align:top">
+                                                                                        <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                <tbody><tr><td dir="ltr" class="ers-fs-250" style="font-size:25px;letter-spacing:-0.086em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:left;line-height:0.83;mso-line-height-alt:25px">Oelvé<br></td></tr>
+                                                                                            </tbody></table>
+                                                                                        </td></tr></tbody></table>
+                                                                                    </td>
+                                                                                    <td width="16" style="width:16px;box-sizing:border-box;font-size:0">&nbsp;</td>
+                                                                                    <td width="47.46%" style="width:47.46%;box-sizing:border-box;vertical-align:top">
+                                                                                        <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                                <tbody><tr><td dir="ltr" style="font-size:13.3px;white-space:pre-wrap;text-align:right;line-height:16px;mso-line-height-alt:16px">a Velvet Jewelry <br></td></tr>
+                                                                                            </tbody></table>
+                                                                                        </td></tr></tbody></table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody></table>
+                                                                        </td></tr>
+                                                                    </tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 0px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%">
+                                                                            <img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/4af2ec3725672398c1bbe393ad7c46eb.jpg" width="600" height="590" style="display:block;width:600px;height:auto;max-width:100%">
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td dir="ltr" class="ers-fs-267" style="color:#e61e19;font-size:26.7px;letter-spacing:-0.03em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:37.4px">Oelvé<br></td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:300px"><tbody><tr><td style="width:100%">
+                                                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#e61e19" style="background-color:#e61e19;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:11px;padding-bottom:11px;padding-left:8px;padding-right:8px;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:20px;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Shop More</span></a></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" class="layout-1" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px">
+                                                                        <tbody><tr><td style="text-align:center">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                                                <tbody><tr><td width="100.00%" style="width:100.00%;box-sizing:border-box;vertical-align:top;background-color:#ffffff">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                            <tbody>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:24.2px">Thank you for choosing us and for welcoming one of our pieces into your collection. <br></td></tr>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:24.2px">Every piece of jewelry has a story, and we're honored to be a small part of yours. Whether it's a piece you've chosen for yourself or a meaningful gift for someone special, we hope it brings you joy every time you wear it.<br></td></tr>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:24.2px">Your order is now being carefully prepared, with the same attention to detail and care that went into creating your piece.<br></td></tr>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;font-weight:700;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:24.2px;text-decoration:none">&nbsp;</td></tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td></tr></tbody></table>
+                                                                                </td></tr>
+                                                                            </tbody></table>
+                                                                        </td></tr>
+                                                                    </tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 0px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px"><tbody><tr><td style="width:100%">
+                                                                            <img src="https://a7qrwbdeizluuqugfrge_xe5m3shkyynhawj0n0cxwu.canva-cdn.email/d26858b7b5c301e6502f436bbabaf440.jpg" width="600" height="439" style="display:block;width:600px;height:auto;max-width:100%">
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:542px"><tbody><tr><td height="1" style="height:1px;border-radius:999px;line-height:1px;mso-line-height-rule:exactly;font-size:0;background-color:#bfc3c8">&nbsp;</td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td dir="ltr" class="ers-fs-173" style="color:#e61e19;font-size:17.3px;font-weight:700;letter-spacing:-0.03em;font-family:&quot;Tex Gyre Bonum&quot;, Arial, Helvetica, sans-serif;white-space:pre-wrap;text-align:center;padding:0px 24px 16px;line-height:1.4;mso-line-height-alt:24.2px">A little reminder:<br></td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" class="layout-2" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto">
+                                                                        <tbody><tr><td style="text-align:center;padding:20.26596095756615px 50.54095412001171px">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:451px;table-layout:fixed;margin:0 auto">
+                                                                                <tbody><tr><td width="100.00%" style="width:100.00%;box-sizing:border-box;vertical-align:top">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                            <tbody>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:24.2px">Jewelry is more than an accessory — it's a keepsake of moments, memories, and milestones worth celebrating.<br></td></tr>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;line-height:1.4;mso-line-height-alt:24.2px">We can't wait for you to see your piece.<br></td></tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td></tr></tbody></table>
+                                                                                </td></tr>
+                                                                            </tbody></table>
+                                                                        </td></tr>
+                                                                    </tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:542px"><tbody><tr><td height="1" style="height:1px;border-radius:999px;line-height:1px;mso-line-height-rule:exactly;font-size:0;background-color:#bfc3c8">&nbsp;</td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%"><tbody><tr><td align="center">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:294px"><tbody><tr><td style="width:100%">
+                                                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:100%;border-collapse:separate;border-spacing:0"><tbody><tr><td bgcolor="#e61e19" style="background-color:#e61e19;border-bottom:0px solid transparent;border-left:0px solid transparent;border-radius:25px;border-right:0px solid transparent;border-top:0px solid transparent;mso-border-alt:none"><a href="#" target="_blank" rel="noopener" ses:no-track="" style="color:#ffffff;text-decoration:none;display:block;padding-top:8px;padding-bottom:8px;padding-left:8px;padding-right:8px;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:20px;letter-spacing:0em;line-height:28px;box-sizing:border-box;mso-line-height-rule:exactly"><span style="word-break:break-word;line-height:28px;color:#ffffff;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#ffffff">Shop More</span></a></td></tr></tbody></table>
+                                                                        </td></tr></tbody></table>
+                                                                    </td></tr></tbody></table>
+                                                                </td></tr>
+                                                                <tr><td style="padding:0px 24px 16px">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" class="layout-3" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px">
+                                                                        <tbody><tr><td style="text-align:center;padding:0px 50.801494424035695px">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:451px;table-layout:fixed;margin:0 auto">
+                                                                                <tbody><tr><td width="100.00%" style="width:100.00%;box-sizing:border-box;vertical-align:top">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td>
+                                                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                                            <tbody>
+                                                                                                <tr><td dir="ltr" class="ers-fs-173" style="font-size:17.3px;letter-spacing:-0.03em;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:1.4;mso-line-height-alt:24.2px">Reply to this email. It goes to me directly — no form, no ticket, no chatbot. I'd genuinely rather hear it than not.<br></td></tr>
+                                                                                                <tr><td dir="ltr" style="font-size:16px;text-align:center;line-height:1.4;mso-line-height-alt:22.4px"><span style="white-space:pre-wrap">— [Your name] [Your role], Oelvé</span><span style="font-weight:700;white-space:pre-wrap"> Company</span><br></td></tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td></tr></tbody></table>
+                                                                                </td></tr>
+                                                                            </tbody></table>
+                                                                        </td></tr>
+                                                                    </tbody></table>
+                                                                </td></tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td></tr>
+                                                </tbody></table>
+                                            </td></tr>
+                                            <tr><td height="100%" style="height:100%;font-size:0;line-height:0" aria-hidden="true">&nbsp;</td></tr>
+                                            <tr><td style="vertical-align:top">
+                                                <table border="0" cellpadding="0" cellspacing="0" class="layout-4" align="center" style="display:table;border-spacing:0px;border-collapse:separate;width:100%;max-width:100%;table-layout:fixed;margin:0 auto;background-color:#edf0f2">
+                                                    <tbody><tr><td style="text-align:center;padding:0px 24px">
+                                                        <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;max-width:552px;table-layout:fixed;margin:0 auto">
+                                                            <tbody><tr><td width="100.00%" style="width:100.00%;box-sizing:border-box;vertical-align:top;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0">
+                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0px;border-collapse:separate;width:100%;table-layout:fixed"><tbody><tr><td style="padding:13px">
+                                                                    <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color:#000;font-style:normal;font-weight:normal;font-size:16px;line-height:1.4;letter-spacing:0;text-align:left;direction:ltr;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;white-space:normal;word-wrap:break-word;word-break:break-word">
+                                                                        <tbody>
+                                                                            <tr><td dir="ltr" style="font-size:14.7px;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;text-align:center;padding:0px 0px 16px;line-height:22.4px;mso-line-height-alt:22.4px"><a href="{{ view_in_browser }}" target="_blank" rel="noopener nofollow" style="color:inherit;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">View in browser</span></a><span style="white-space:pre-wrap">    |    </span><a href="{{ update_preferences }}" target="_blank" rel="noopener nofollow" style="color:inherit;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">Update your preferences</span></a><span style="white-space:pre-wrap">    |    </span><a href="{{ unsubscribe }}" target="_blank" rel="noopener nofollow" style="color:inherit;text-decoration:inherit"><span style="text-decoration:underline;white-space:pre-wrap">Unsubscribe</span></a><br></td></tr>
+                                                                            <tr><td dir="ltr" style="font-size:14.7px;font-weight:700;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:8px;mso-line-height-alt:14.7px">Ingoude Company<br></td></tr>
+                                                                            <tr><td dir="ltr" style="font-size:14.7px;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:8px;mso-line-height-alt:14.7px">Suite 123, 123 Anywhere St., Any City, ST 12345<br></td></tr>
+                                                                            <tr><td dir="ltr" style="font-size:14.7px;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:8px;mso-line-height-alt:14.7px;text-decoration:none">&nbsp;</td></tr>
+                                                                            <tr><td dir="ltr" style="font-size:13.3px;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;padding:0px 0px 16px;line-height:8px;mso-line-height-alt:13.3px">© 2025 Company Inc. All rights reserved.<br></td></tr>
+                                                                            <tr><td dir="ltr" style="font-size:13.3px;letter-spacing:-0.02em;font-family:&quot;Times New Roman&quot;, Times, serif;white-space:pre-wrap;text-align:center;line-height:8px;mso-line-height-alt:13.3px">You're receiving this email because you signed up for updates from Company Inc.<br></td></tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td></tr></tbody></table>
+                                                            </td></tr>
+                                                        </tbody></table>
+                                                    </td></tr>
+                                                </tbody></table>
+                                            </td></tr>
+                                        </tbody></table>
+                                    </td></tr></tbody>
+                                </table>
+                            </body>
+                            </html>
+                            <!-- ====== END THANK YOU ====== -->
+                        </div>
+                    </div>
+                    <div class="card-progress"><div class="card-progress-bar"></div></div>
+                </div>
+
+            </div> <!-- /card-stack -->
+
+            <!-- Navigation Arrows -->
+            <button class="nav-arrow prev" id="prevBtn" aria-label="Previous card">‹</button>
+            <button class="nav-arrow next" id="nextBtn" aria-label="Next card">›</button>
+        </div> <!-- /card-stack-wrapper -->
+
+        <!-- Dot Indicators -->
+        <div class="dot-indicators" id="dotIndicators">
+            <button class="dot active" data-index="0" aria-label="Go to card 1"></button>
+            <button class="dot" data-index="1" aria-label="Go to card 2"></button>
+            <button class="dot" data-index="2" aria-label="Go to card 3"></button>
+            <button class="dot" data-index="3" aria-label="Go to card 4"></button>
+        </div>
+
+        <!-- Swipe Hint -->
+        <div class="swipe-hint">← Swipe, tap, or use arrow keys →</div>
+
+    </div> <!-- /main-container -->
+
+    <!-- ============================================================ -->
+    <!-- MODAL OVERLAY                                                 -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Email Preview</h2>
+                <button class="close-btn" id="modalCloseBtn">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Cloned email content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                        -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <p>Four email samples · preview only · no interactive links</p>
+        <div class="footer-links">
+            <a href="#">Portfolio</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // ── Theme Toggle ──
+            const themeToggle = document.getElementById('themeToggle');
+            const htmlEl = document.documentElement;
+
+            const savedTheme = localStorage.getItem('email-showcase-theme') || 'light';
+            htmlEl.setAttribute('data-theme', savedTheme);
+
+            themeToggle.addEventListener('click', function() {
+                const current = htmlEl.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                htmlEl.setAttribute('data-theme', next);
+                localStorage.setItem('email-showcase-theme', next);
+            });
+
+            // ── Card Stack Carousel ──
+            const cards = Array.from(document.querySelectorAll('.email-card'));
+            const totalCards = cards.length;
+            const counterCurrent = document.getElementById('counterCurrent');
+            const dots = Array.from(document.querySelectorAll('.dot'));
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const stackWrapper = document.getElementById('cardStackWrapper');
+            const progressBars = cards.map(c => c.querySelector('.card-progress-bar'));
+
+            let currentIndex = 0;
+            let isAnimating = false;
+
+            // Email name mapping for modal
+            const emailNames = {
+                welcome: 'Welcome Email',
+                appointment: 'Appointment Confirmed Email',
+                promotional: 'Promotional Email',
+                thankyou: 'Thank You Email'
+            };
+
+            // ── Update card positions ──
+            function updateStack() {
+                cards.forEach((card, i) => {
+                    card.classList.remove('active', 'behind-1', 'behind-2', 'behind-3', 'fly-left', 'fly-right');
+
+                    // Calculate relative position (0 = active, 1 = next, etc.)
+                    const relative = (i - currentIndex + totalCards) % totalCards;
+
+                    if (relative === 0) {
+                        card.classList.add('active');
+                    } else if (relative === 1) {
+                        card.classList.add('behind-1');
+                    } else if (relative === 2) {
+                        card.classList.add('behind-2');
+                    } else if (relative === 3) {
+                        card.classList.add('behind-3');
+                    }
+                });
+
+                // Update counter
+                counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+
+                // Update dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+
+                // Update progress bar for active card
+                progressBars.forEach((bar, i) => {
+                    bar.style.width = i === currentIndex ? '100%' : '0%';
+                });
+
+                // Reset scroll position of active preview frame
+                const activeFrame = cards[currentIndex].querySelector('.preview-frame');
+                if (activeFrame) activeFrame.scrollTop = 0;
+            }
+
+            // ── Go to next card (forward) ──
+            function goNext() {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const currentCard = cards[currentIndex];
+                const nextIndex = (currentIndex + 1) % totalCards;
+                const nextCard = cards[nextIndex];
+
+                // Fly out current card to the left
+                currentCard.classList.remove('active');
+                currentCard.classList.add('fly-left');
+
+                // Prepare next card
+                nextCard.classList.remove('behind-1', 'behind-2', 'behind-3', 'fly-left', 'fly-right');
+                nextCard.classList.add('active');
+
+                // Update the rest of the stack
+                cards.forEach((card, i) => {
+                    if (i === currentIndex || i === nextIndex) return;
+                    card.classList.remove('behind-1', 'behind-2', 'behind-3');
+                });
+
+                currentIndex = nextIndex;
+                counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+                progressBars.forEach((bar, i) => {
+                    bar.style.width = i === currentIndex ? '100%' : '0%';
+                });
+
+                const activeFrame = cards[currentIndex].querySelector('.preview-frame');
+                if (activeFrame) activeFrame.scrollTop = 0;
+
+                setTimeout(() => {
+                    updateStack();
+                    isAnimating = false;
+                }, 700);
+            }
+
+            // ── Go to previous card (backward) ──
+            function goPrev() {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const currentCard = cards[currentIndex];
+                const prevIndex = (currentIndex - 1 + totalCards) % totalCards;
+                const prevCard = cards[prevIndex];
+
+                // Current card flies out to the right
+                currentCard.classList.remove('active');
+                currentCard.classList.add('fly-right');
+
+                // Previous card enters from behind
+                prevCard.classList.remove('behind-1', 'behind-2', 'behind-3', 'fly-left', 'fly-right');
+                prevCard.classList.add('active');
+
+                cards.forEach((card, i) => {
+                    if (i === currentIndex || i === prevIndex) return;
+                    card.classList.remove('behind-1', 'behind-2', 'behind-3');
+                });
+
+                currentIndex = prevIndex;
+                counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+                progressBars.forEach((bar, i) => {
+                    bar.style.width = i === currentIndex ? '100%' : '0%';
+                });
+
+                const activeFrame = cards[currentIndex].querySelector('.preview-frame');
+                if (activeFrame) activeFrame.scrollTop = 0;
+
+                setTimeout(() => {
+                    updateStack();
+                    isAnimating = false;
+                }, 700);
+            }
+
+            // ── Go to specific card ──
+            function goTo(index) {
+                if (isAnimating || index === currentIndex) return;
+                isAnimating = true;
+
+                const currentCard = cards[currentIndex];
+                const targetCard = cards[index];
+
+                // Determine direction
+                const forward = ((index - currentIndex + totalCards) % totalCards) <= totalCards / 2;
+
+                if (forward) {
+                    currentCard.classList.remove('active');
+                    currentCard.classList.add('fly-left');
+                } else {
+                    currentCard.classList.remove('active');
+                    currentCard.classList.add('fly-right');
+                }
+
+                targetCard.classList.remove('behind-1', 'behind-2', 'behind-3', 'fly-left', 'fly-right');
+                targetCard.classList.add('active');
+
+                cards.forEach((card, i) => {
+                    if (i === currentIndex || i === index) return;
+                    card.classList.remove('behind-1', 'behind-2', 'behind-3');
+                });
+
+                currentIndex = index;
+                counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+                progressBars.forEach((bar, i) => {
+                    bar.style.width = i === currentIndex ? '100%' : '0%';
+                });
+
+                const activeFrame = cards[currentIndex].querySelector('.preview-frame');
+                if (activeFrame) activeFrame.scrollTop = 0;
+
+                setTimeout(() => {
+                    updateStack();
+                    isAnimating = false;
+                }, 700);
+            }
+
+            // ── Event Listeners ──
+            nextBtn.addEventListener('click', goNext);
+            prevBtn.addEventListener('click', goPrev);
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'), 10);
+                    goTo(index);
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') goNext();
+                if (e.key === 'ArrowLeft') goPrev();
+            });
+
+            // ── Card Click/Tap to advance ──
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Ignore if clicking the full view button
+                    if (e.target.closest('.fullview-btn')) return;
+                    // Only active card responds to click
+                    if (this.classList.contains('active')) {
+                        goNext();
+                    }
+                });
+            });
+
+            // ── Swipe / Drag Support ──
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let touchEndX = 0;
+            let touchEndY = 0;
+            let isDragging = false;
+            let mouseStartX = 0;
+            let mouseStartY = 0;
+
+            // Touch events
+            stackWrapper.addEventListener('touchstart', function(e) {
+                if (isAnimating) return;
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+                isDragging = true;
+            }, { passive: true });
+
+            stackWrapper.addEventListener('touchend', function(e) {
+                if (!isDragging) return;
+                touchEndX = e.changedTouches[0].screenX;
+                touchEndY = e.changedTouches[0].screenY;
+                handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+                isDragging = false;
+            }, { passive: true });
+
+            // Mouse drag events
+            stackWrapper.addEventListener('mousedown', function(e) {
+                if (isAnimating) return;
+                if (e.target.closest('.fullview-btn')) return;
+                if (e.target.closest('.nav-arrow')) return;
+                if (e.target.closest('.dot')) return;
+                mouseStartX = e.screenX;
+                mouseStartY = e.screenY;
+                isDragging = true;
+            });
+
+            document.addEventListener('mouseup', function(e) {
+                if (!isDragging) return;
+                const mouseEndX = e.screenX;
+                const mouseEndY = e.screenY;
+                handleSwipe(mouseStartX, mouseStartY, mouseEndX, mouseEndY);
+                isDragging = false;
+            });
+
+            function handleSwipe(startX, startY, endX, endY) {
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+
+                // Only trigger if horizontal swipe is dominant
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 60) {
+                    if (diffX > 0) {
+                        // Swiped left → next
+                        goNext();
+                    } else {
+                        // Swiped right → previous
+                        goPrev();
+                    }
+                }
+            }
+
+            // ── Modal (Full View) ──
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalBody = document.getElementById('modalBody');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+            function openModal(target) {
+                const card = document.querySelector(`.email-card[data-email="${target}"]`);
+                if (!card) return;
+
+                const wrapper = card.querySelector('.email-wrapper');
+                if (!wrapper) return;
+
+                const clone = wrapper.cloneNode(true);
+                clone.style.pointerEvents = 'none';
+                clone.style.cursor = 'default';
+                clone.style.maxWidth = '600px';
+                clone.style.width = '100%';
+                clone.style.margin = '0 auto';
+
+                modalBody.innerHTML = '';
+                modalBody.appendChild(clone);
+
+                modalTitle.textContent = emailNames[target] || 'Email Preview';
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    if (!modalOverlay.classList.contains('active')) {
+                        modalBody.innerHTML = '';
+                    }
+                }, 300);
+            }
+
+            document.querySelectorAll('.fullview-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const target = this.getAttribute('data-target');
+                    if (target) openModal(target);
+                });
+            });
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+            });
+
+            // ── Floating Widgets ──
+            document.getElementById('backHomeWidget').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            document.getElementById('contactWidget').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Contact Me — palitan ng totoong link (mailto: o contact page).');
+            });
+
+            // ── Initialize ──
+            updateStack();
+
+        })();
+    </script>
+
+</body>
+</html>
